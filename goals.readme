@@ -1,0 +1,11 @@
+Spin up a vagrant box using either Ubuntu 12.04 or CentOS 6 and have vagrant configure the following via puppet:
+
+1) Relational database of your choice (MySQL, Postgres, Oracle….your choice)
+2) create a single database to house the application    
+3) Configure a user account and give it access to the database
+4) Install a recent version of ruby (1.9 or greater)
+5) Install Rails using the gem utility
+6) Create a new rails application (the generic hello world bootstrap that comes from "rails new” is fine")
+7) Create the database.yml file using the database you created and the password from hiera.
+8) Configure the server to start the app as an unprivileged user on reboot
+9) Expose the app on https with nginx web server. Generate a self signed certificate but only enable strong/not broken encryption.
