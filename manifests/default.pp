@@ -1,9 +1,9 @@
 exec { "apt-get update":
-  ``path => "/usr/bin",
+  path => "/usr/bin",
   }
   package { "nginx":
     ensure  => present,
-  ``require => Exec["apt-get update"],
+  require => Exec["apt-get update"],
       }
       package { "rails":
         ensure => present,
