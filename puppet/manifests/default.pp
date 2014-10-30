@@ -15,7 +15,7 @@ exec { "apt-get update":
           }
   file { "/var/www/sample-webapp":
     ensure  => "link",
-    target  => "/vagrant/sample-webapp",
+    target  => "/files/homework-webapp",
     require => Package["ngnix"],
     notify  => Service["ngnix"],
   }
